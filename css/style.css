@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --amarelo: #ffe300;
+    --preto: #000000;
+    --cinza: #ababab;
+    --branco: #FFFFFF;
+    --degrade-btn: linear-gradient(#ffe300, #ffd700);
+}
+
+/* Estilo para o fundo amarelo */
+.background-preto {
+    background: var(--preto);
+}
+
+/* Container geral para o restante do conteúdo */
+.container {
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+.btn-gradiente{
+    padding: 10px 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-image: var(--degrade-btn);
+}
+/* classes do site */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.ul {
+    display: flex;
+    align-items: center;
+}
+.ul li{
+    margin: 0 35px;
+    font-size: 15px;
+}
+.ul li a{
+    color: white;
+}
+.main-text {
+    color: white;
+}
+/* main */
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.main-text{
+    width: 50%;
+    color: white;
+}
+.main-text h1{
+    font-size: 4.5rem;
+}
+.main-text div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.main-img{
+    width: 50%;
+}
+.main-img{
+    width: 100%;
+}
+/* menu icone */
+.menu-icon{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+/* responsivo */
+@media (max-width: 960px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .ul {
+        position: fixed;
+        background: var(--preto);
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        transition: left 0.3s;
+    }
+
+    .ul.ativo {
+        left: 0;
+    }
+
+    .ul li {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    main .container{
+        flex-direction: column;
+    }
+    
+    main .container .main-img,
+    main .container .main-text{
+        width: 100%;
+        text-align: center;
+    }
+    main .container .main-text h1{
+        font-size: 4rem;
+    }
+    main .container .main-text div{
+        justify-content: center;
+    }
+}
