@@ -265,7 +265,9 @@ main .container {
     color: white;
     background-color:var(--amarelo) ;
     border: none;
+    cursor: pointer;
 }
+
 /* section newsleater */
 .newsleater{
     margin-top: 50px;
@@ -275,7 +277,7 @@ main .container {
 .newsleater .box-newsleater{
     text-align: center;
     padding: 200px;
-    background-image: url('../img/fundo.png');
+    background-image: url('../img/fundo.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -312,6 +314,41 @@ main .container {
     cursor: pointer;
 }
 /* end section newsleater */
+/* footer */
+footer{
+    background-color: var(--amarelo);
+}
+
+footer .container{
+    display: flex;
+    color: black;
+}
+
+footer .container ul{
+    width: 25%;
+}
+
+footer .container h3{
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+footer .container .redes-sociais img{
+    margin-right: 10px; 
+}
+
+footer .container ul > p{
+    margin-bottom: 40px;
+}
+
+footer .container li{
+    margin: 10px 0;
+}
+
+footer .container a{
+    color: white;
+}
+/* end footer */
 /* Responsivo */
 @media (max-width: 960px) {
     .menu-icon {
@@ -387,7 +424,16 @@ main .container {
         width: 50%;
         margin-top: 20px;
     }
+
+    footer .container{
+        flex-direction: column;
     }
+
+    footer .container ul{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
 
 @media (max-width: 440px) {
     .resultados .resultados-numeros {
