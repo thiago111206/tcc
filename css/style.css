@@ -13,9 +13,10 @@ body {
 }
 
 :root {
-    --amarelo: #ffe300;
+    --amarelo: #ffe100;
     --preto: #000000;
-    --cinza: #ababab;
+    --cinza-claro: #ababab;
+    --cinza-escuro: #808080;
     --branco: #FFFFFF;
     --degrade-btn: linear-gradient(#ffe300, #ffd700);
 }
@@ -32,20 +33,25 @@ body {
     margin: 0 auto;
 }
 
-section{
+section {
     padding: 2.7rem 0;
 }
 
-.btn-gradiente{
+.btn-gradiente {
     padding: 10px 25px;
     color: white;
     border: none;
     cursor: pointer;
     background-image: var(--degrade-btn);
+    transition: background 0.3s ease;
 }
 
-/* classes do site */
-nav{
+.btn-gradiente:hover {
+    background-image: linear-gradient(#ffd700, #ffe300);
+}
+
+/* Classes do site */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,121 +63,256 @@ nav{
     align-items: center;
 }
 
-.ul li{
+.ul li {
     margin: 0 35px;
     font-size: 15px;
 }
 
-.ul li a{
+.ul li a {
     color: white;
+    transition: color 0.3s;
+}
+
+.ul li a:hover {
+    color: var(--amarelo);
 }
 
 .main-text {
     color: white;
 }
 
-/* main */
-main .container{
+/* Main */
+main .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
 }
 
-.main-text{
+.main-text {
     width: 50%;
     color: white;
 }
 
-.main-text h1{
+.main-text h1 {
     font-size: 4.5rem;
 }
 
-.main-text div{
+.main-text div {
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
 
-.main-img{
+.main-img {
     width: 50%;
 }
 
-.main-img{
+.main-img img {
     width: 100%;
 }
 
-/* menu icone */
-.menu-icon{
+/* Menu ícone */
+.menu-icon {
     display: none;
     position: relative;
     z-index: 10;
 }
 
-/* resultados */
-.resultados{
-    background:#ffd700 ;
+/* Resultados */
+.resultados {
+    background: #ffd700;
 }
 
-.resultados .container{
+.resultados .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.resultados .resultados-text{
+.resultados .resultados-text {
     color: white;
-    font-size:  1.6rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    width:  50%;
+    width: 50%;
 }
 
-.resultados .resultados-numeros{
+.resultados .resultados-numeros {
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
 }
 
-.resultados .resultados-numeros p{
+.resultados .resultados-numeros p {
     text-align: center;
-    margin:  0 30px;
-    font-size:  20px;
+    margin: 0 30px;
+    font-size: 20px;
 }
 
-.resultados .resultados-numeros p span{
-    font-size:  30px;
+.resultados .resultados-numeros p span {
+    font-size: 30px;
     font-weight: 600;
 }
-/* section diferecias */
-.diferencias .container{
+
+/* Section Diferencias */
+.diferencias .container {
     display: flex;
     justify-content: space-between;
-    margin:  30px auto;
+    margin: 30px auto;
 }
 
-.diferencias .card{
-    width:  30%;
+.diferencias .card {
+    width: 30%;
     cursor: pointer;
     padding: 30px;
-    border-radius:  15px;
+    border-radius: 15px;
     transition: 0.3s;
-  
 }
 
-.diferencias .card:hover{
-   box-shadow: 0px 10px 67px 8px;
+.diferencias .card:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.diferencias .card img{
-    width:  60px;
+.diferencias .card img {
+    width: 60px;
 }
 
-.diferencias .card .titulo{
+.diferencias .card .titulo {
     margin: 13px 0;
     font-weight: 600;
 }
-/* responsivo */
+
+/* Section Jogo */
+.noticia .container {
+    display: flex;
+    align-items: center;
+}
+
+.noticia .noticia1-img {
+    width: 50%;
+}
+
+.noticia .noticia1-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.noticia .noticia-text {
+    width: 50%;
+    padding-left: 90px;
+}
+
+.noticia .noticia-text h2 {
+    font-size: 2.5em;
+}
+
+.noticia .noticia-text p {
+    margin: 20px 0;
+    color: var(--cinza-claro);
+}
+
+.noticia .noticia-text p b {
+    color: var(--preto);
+    font-size: 25px;
+}
+
+.ultimas-noticias .azul {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0060f0;
+}
+
+.ultimas-noticias h2 {
+    font-size: 2.5rem;
+}
+
+.ultimas-noticias .cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.ultimas-noticias .cards .card-item {
+    width: 30%;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0px 35px 97px -15px var(--cinza-claro) ;
+}
+
+.ultimas-noticias .cards img{
+    width: 80%;
+}
+
+.ultimas-noticias .cards .tema{
+    margin: 5px 0;
+    color: var(--cinza-escuro);
+}
+
+.ultimas-noticias .cards .subtema{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.ultimas-noticias .cards .noticia1{
+    margin-bottom: 20px;
+    color: var(--cinza-escuro);
+}
+
+.ultimas-noticias .cards button{
+    padding: 10px 20px;
+    color: white;
+    background-color:var(--amarelo) ;
+    border: none;
+}
+/* section newsleater */
+.newsleater{
+    margin-top: 50px;
+    background-color: var(--preto);
+}
+
+.newsleater .box-newsleater{
+    text-align: center;
+    padding: 200px;
+    background-image: url('../img/fundo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.newsleater .box-newsleater h2{
+    font-size: 2.5rem;
+}
+
+.newsleater .box-newsleater p{
+    margin: 13px 0;
+}
+
+.newsleater .box-newsleater input{
+    width: 35%;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: #00000098;
+    background-color: #faefda;
+}
+
+
+.newsleater .box-newsleater button{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 14px;
+    color: white;
+    background-color: var(--preto);
+    cursor: pointer;
+}
+/* end section newsleater */
+/* Responsivo */
 @media (max-width: 960px) {
     .menu-icon {
         display: block;
@@ -197,41 +338,82 @@ main .container{
         font-size: 20px;
         margin: 20px 0;
     }
-    main .container{
+
+    main .container {
         flex-direction: column;
     }
-    
+
     main .container .main-img,
-    main .container .main-text{
+    main .container .main-text {
         width: 100%;
         text-align: center;
     }
-    main .container .main-text h1{
-        font-size: 4rem;
-    }
-    main .container .main-text div{
-        justify-content: center;
-    }
-    .resultados .container{
+
+    .resultados .container {
         flex-direction: column;
     }
+
     .resultados .resultados-text,
-    .resultados .resultados-numeros{
+    .resultados .resultados-numeros {
         width: 100%;
         text-align: center;
     }
-    .resultados-numeros{
-        margin-top:  30px;
+
+    .resultados-numeros {
+        margin-top: 30px;
     }
 
-    @media (max-width: 440px){
-        .resultados .resultados-numeros{
-            flex-direction: column
-        }
-        
-        main .container .main-text h1 {
-                font-size: 3rem;
-            }
-        }
+    .ultimas-noticias .cards{
+        flex-direction: column;
     }
 
+    .ultimas-noticias .cards .card-item{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .newsleater .box-newsleater{
+        padding: 50px;
+    }
+    .newsleater .box-newsleater h2 {
+        font-size: 2.0rem;
+    }
+
+    .newsleater .box-newsleater input{
+        width: 90%;
+    }
+
+    .newsleater .box-newsleater button{
+        width: 50%;
+        margin-top: 20px;
+    }
+    }
+
+@media (max-width: 440px) {
+    .resultados .resultados-numeros {
+        flex-direction: column;
+    }
+
+    .diferencias .container {
+        flex-direction: column;
+    }
+
+    .diferencias .card {
+        width: 100%;
+    }
+
+    .noticia .container {
+        flex-direction: column-reverse;
+    }
+
+    .noticia .noticia1-img,
+    .noticia .noticia-text {
+        width: 100%;
+        text-align: center;
+        padding: 0%;
+    }
+
+    main .container .main-text h1 {
+        font-size: 3rem;
+    }
+}
