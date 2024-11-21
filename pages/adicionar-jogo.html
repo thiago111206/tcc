@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Jogo</title>
+    <link rel="stylesheet" href="/css/crud.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/crud.js" defer></script>
+</head>
+<body>
+    <div class="container" id="adicionar-jogo">
+        <nav>
+            <div class="logo">
+               <a href="/index.html"> <img src="https://www.criciuma.com.br/includes/inc_nav/imgs/brand.png" alt="logo do criciuma"></a>
+            </div>
+            <ul class="ul">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/pages/sobre-nos.html">Sobre nós</a></li>
+                <li><a href="/pages/seja-socio.html">Seja sócio</a></li>
+                <li><a href="/pages/noticias.html">Notícias</a></li>
+                <li><a href="/pages/adicionar-jogo.html">Adicionar jogo</a></li>
+                <li><a href="/pages/seja-socio.html"><button class="btn-gradiente">Seja sócio</button></a></li>
+            </ul>
+            <div class="menu-icon">
+                <img src="img/menu.png" alt="ícone de menu">
+            </div>
+        </nav>
+    </div>
+    <header>
+        <h1 class="header-title">Cadastro de jogos</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue  0mobile" id="cadastrarCliente">Cadastrar jogo</button>
+        <table id="tableClient" class="records">
+             <thead>
+                <tr>
+                    <th>Time casa</th>
+                    <th>Time fora</th>
+                    <th>Estádio</th>
+                    <th>Data</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo jogo</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Time da casa"
+                        required>
+                    <input type="text" id="email" class="modal-field" placeholder="Time de fora" required>
+                    <input type="text" id="celular" class="modal-field" placeholder="Estádio" required>
+                    <input type="text" id="cidade" class="modal-field" placeholder="Dia do jogo" required>
+                    <input type="datetime" name="horario" id="hora" placeholder="Horário do jogo">
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
