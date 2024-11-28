@@ -339,15 +339,14 @@ footer .container .redes-sociais img{
 
 footer .container ul > p{
     margin-bottom: 40px;
+    color: #000000;
 }
 
 footer .container li{
     margin: 10px 0;
+    color: #000000;
 }
 
-footer .container a{
-    color: white;
-}
 /* end footer */
 /* Responsivo */
 @media (max-width: 960px) {
