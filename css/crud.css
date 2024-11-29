@@ -300,6 +300,10 @@ footer .container ul > p{
     margin-bottom: 40px;
 }
 
+footer .container a{
+    color: black;
+}
+
 footer .container li{
     margin: 10px 0;
 }

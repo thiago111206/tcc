@@ -49,7 +49,8 @@ const saveClient = () => {
             nome: document.getElementById('nome').value,
              email: document.getElementById('email').value,
               celular: document.getElementById('celular').value,
-            cidade: document.getElementById('cidade').value
+            cidade: document.getElementById('cidade').value,
+            hora: document.getElementById('hora').value
         }
         const index = document.getElementById('nome').dataset.index
         if (index == 'new') {
@@ -97,7 +98,7 @@ const fillFields = (client) => {
     document.getElementById('celular').value = client.celular
     document.getElementById('cidade').value = client.cidade
     document.getElementById('nome').dataset.index = client.index
-    document.getElementById('hora').value = client.hora
+    document.getElementById('hora').dataset.value = client.hora
 }
 
 const editClient = (index) => {
